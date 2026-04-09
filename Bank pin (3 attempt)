@@ -1,0 +1,23 @@
+#include <stdio.h>
+
+int main() {
+    int pin = 1234 , a , i;
+
+    for (i = 1; i <= 3; i++) {
+        printf("Enter PIN: ");
+        scanf("%d", &a);
+
+        if (pin == a) {
+            printf("Enter amount: ");
+            break;
+        } else {
+            if (i < 3) {
+                printf("Incorrect PIN. Try again.\n");
+            } else {
+                printf("Your card has been blocked.\n");
+            }
+        }
+    }
+
+    return 0;
+}
